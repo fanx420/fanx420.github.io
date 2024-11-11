@@ -7,6 +7,8 @@ function changeTheme(){
     var btnGithub = document.getElementById("btnGithub");
     var btnWebpage2 = document.getElementById("btnWebpage2")
     var btnGithub2 = document.getElementById("btnGithub2");
+    var btnWebpage3 = document.getElementById("btnWebpage3")
+    var btnGithub3 = document.getElementById("btnGithub3");
 
     if (colorMode == "light"){
         body.setAttribute("data-bs-theme", "light");
@@ -17,6 +19,8 @@ function changeTheme(){
         btnGithub.classList.replace("btn-light", "btn-dark");
         btnWebpage2.classList.replace("btn-light", "btn-dark");
         btnGithub2.classList.replace("btn-light", "btn-dark");
+        btnWebpage3.classList.replace("btn-light", "btn-dark");
+        btnGithub3.classList.replace("btn-light", "btn-dark");
         colorMode = "dark";
 
     }
@@ -29,6 +33,8 @@ function changeTheme(){
         btnGithub.classList.replace("btn-dark", "btn-light");
         btnWebpage2.classList.replace("btn-dark", "btn-light");
         btnGithub2.classList.replace("btn-dark", "btn-light");
+        btnWebpage3.classList.replace("btn-dark", "btn-light");
+        btnGithub3.classList.replace("btn-dark", "btn-light");
         colorMode = "light";
     }
 
