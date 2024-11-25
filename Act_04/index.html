@@ -12,20 +12,47 @@
 <style>
     body {
         font-family: 'Poppins', sans-serif;
+        background-color: black;
     }
-
-    .card {
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .card:hover {
-        transform: scale(1.05);
-    }
-
-    .section {
+    .videoContainer {
+        position: relative;
         height: 100vh;
+        width: 100%;
+        overflow: hidden;
     }
 
+    .video {
+        position: absolute;
+        pointer-events: none;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    .videoContainer::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 2;
+    }
+
+    .textContainer {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        z-index: 3;
+        background: rgba(0, 0, 0, 0);
+        padding: 20px;
+        border-radius: 10px;
+    }
 </style>
 
 <body data-bs-theme="dark">
@@ -53,95 +80,99 @@
         </nav>
         <div class="section">
             <div class="videoContainer">
+                <div class="textContainer d-flex allign-items-center justify-content-center flex-column">
+                    <h1>Welcome to the attack on titan database</h1>
+                    <h3>Here you can find information about your favorite characters</h3>
+                </div>
                 <div class="video">
-                    <iframe width="560" height="315"
-                        src="https://www.youtube.com/embed/r1XE8ON8fos?si=mPFFgQ-IObdMO2_g&amp;controls=0&disablekb=1&mute=1&autoplay=1&loop=1"
+                    <iframe width="100%" height="100%"
+                        src="https://www.youtube.com/embed/LV-nazLVmgo?si=LyG02_YX7P_v9ax2&amp;controls=0&disablekb=1&mute=1&autoplay=1&loop=1&fulllscreen=1&rel=0&modestbranding=1&showinfo=0"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 mt-5">
-                    <div class="text-center" style="margin-top: 300px;">
-                        <h1>Welcome to the attack on titan database</h1>
-                        <h3>Here you can find information about your favorite characters</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="section">
-            <div class="container my-5">
+                </div>
                 <div class="row">
-                    <div class="col-12">
-                        <h1>Characters</h1>
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination">
-                                <li class="page-item"><a class="page-link disabled" id="btnPrevious"
-                                        onclick="previousPage()">Previous</a></li>
-                                <li class="page-item"><a class="page-link" id="btnNext" onclick="nextPage()">Next</a>
-                                </li>
-                            </ul>
-                        </nav>
+                    <div class="col-12 mt-5">
+                        <div class="text-center" style="margin-top: 300px;">
+
+                        </div>
                     </div>
                 </div>
-                <div class="row g-4" id="container">
-                </div>
-                <div class="scrollTop" style=" position: fixed; bottom: 20px; right: 20px;">
-                    <button id="scrollToTop" type="button" class="btn btn-primary" onclick="scrollToTop()"> Back to
-                        top</button>
+            </div>
+
+            <div class="section">
+                <div class="container my-5">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1>Characters</h1>
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link disabled" id="btnPrevious"
+                                            onclick="previousPage()">Previous</a></li>
+                                    <li class="page-item"><a class="page-link" id="btnNext"
+                                            onclick="nextPage()">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="row g-4" id="container">
+                    </div>
+                    <div class="scrollTop" style=" position: fixed; bottom: 20px; right: 20px;">
+                        <button id="scrollToTop" type="button" class="btn btn-primary" onclick="scrollToTop()"> Back to
+                            top</button>
+                    </div>
                 </div>
             </div>
-        </div>
 
 
 
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
-            integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
-            crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+                integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+                integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+                crossorigin="anonymous"></script>
 
 
 
-        <script>
-            //fetching data
-            const url = 'https://api.attackontitanapi.com/characters/';
+            <script>
+                //fetching data
+                const url = 'https://api.attackontitanapi.com/characters/';
 
 
-            let allCharacters = [];
+                let allCharacters = [];
 
-            var character = 15;
-            var page = 1;
+                var character = 15;
+                var page = 1;
 
-            const getData = async () => {
-                allCharacters = [];
-                for (var i = (((page - 1) * character) + 1); i <= page * character; i++) {
-                    const response = await fetch(url + i);
-                    const data = await response.json();
+                const getData = async () => {
+                    allCharacters = [];
+                    for (var i = (((page - 1) * character) + 1); i <= page * character; i++) {
+                        const response = await fetch(url + i);
+                        const data = await response.json();
 
-                    if (data.img) {
-                        data.img = trimImageUrl(data.img);
+                        if (data.img) {
+                            data.img = trimImageUrl(data.img);
+                        }
+                        allCharacters.push(data);
+
+                        console.log(data);
+                        renderCharacters(allCharacters);
                     }
-                    allCharacters.push(data);
-
-                    console.log(data);
-                    renderCharacters(allCharacters);
                 }
-            }
-            function trimImageUrl(fullUrl) {
-                return fullUrl.split('.png')[0] + '.png';
-            }
+                function trimImageUrl(fullUrl) {
+                    return fullUrl.split('.png')[0] + '.png';
+                }
 
-            //displaying data
-            function renderCharacters(characters) {
-                var container = document.getElementById('container');
-                container.innerHTML = '';
+                //displaying data
+                function renderCharacters(characters) {
+                    var container = document.getElementById('container');
+                    container.innerHTML = '';
 
-                characters.forEach(data => {
-                    container.innerHTML += `
+                    characters.forEach(data => {
+                        container.innerHTML += `
             <div class="col-12 col-md-6 col-lg-4">
                 <a href="view.html?id=${data.id}" style="text-decoration: none;" target="_blank">
                 <div class="card" >
@@ -154,71 +185,71 @@
                 </a>
             </div>
         `;
-                });
-            }
-
-            getData();
-        </script>
-
-        <script>
-            //pagination
-            var btnNext = document.getElementById('btnNext');
-            var btnPrevious = document.getElementById('btnPrevious');
-            function nextPage() {
-                page += 1;
-                if (page > 14) {
-                    page = 14;
+                    });
                 }
 
-                if (page > 1) {
-                    btnPrevious.classList.remove('disabled');
+                getData();
+            </script>
+
+            <script>
+                //pagination
+                var btnNext = document.getElementById('btnNext');
+                var btnPrevious = document.getElementById('btnPrevious');
+                function nextPage() {
+                    page += 1;
+                    if (page > 14) {
+                        page = 14;
+                    }
+
+                    if (page > 1) {
+                        btnPrevious.classList.remove('disabled');
+                    }
+                    else {
+                        btnPrevious.classList.add('disabled');
+                    }
+
+                    container.innerHTML = '';
+                    getData(page);
                 }
-                else {
-                    btnPrevious.classList.add('disabled');
+                function previousPage() {
+                    page -= 1;
+                    if (page < 1) {
+                        page = 1;
+                    }
+
+                    if (page < 14) {
+                        btnNext.classList.remove('disabled');
+                    }
+                    else {
+                        btnNext.classList.add('disabled');
+                    }
+
+                    container.innerHTML = '';
+                    getData(page);
                 }
 
-                container.innerHTML = '';
-                getData(page);
-            }
-            function previousPage() {
-                page -= 1;
-                if (page < 1) {
-                    page = 1;
-                }
 
-                if (page < 14) {
-                    btnNext.classList.remove('disabled');
-                }
-                else {
-                    btnNext.classList.add('disabled');
-                }
-
-                container.innerHTML = '';
-                getData(page);
-            }
-
-
-        </script>
-        <script>
-            window.onload = function () {
-                window.onscroll = function () {
-                    const scrollBtn = document.getElementById('scrollToTop');
-                    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                        scrollBtn.style.display = 'block';
-                    } else {
-                        scrollBtn.style.display = 'none';
+            </script>
+            <script>
+                window.onload = function () {
+                    window.onscroll = function () {
+                        const scrollBtn = document.getElementById('scrollToTop');
+                        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                            scrollBtn.style.display = 'block';
+                        } else {
+                            scrollBtn.style.display = 'none';
+                        }
                     }
                 }
-            }
-            function scrollToTop() {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
+                function scrollToTop() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
 
-                });
+                    });
 
-            }
-        </script>
+                }
+            </script>
 </body>
 
 </html>
