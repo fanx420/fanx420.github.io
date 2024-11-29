@@ -13,9 +13,11 @@
     body {
       font-family: 'Roboto', sans-serif;
     }
-    .navbar{
+
+    .navbar {
       background-color: white;
     }
+
     .section {
       height: 500px;
       overflow-y: auto;
@@ -98,7 +100,7 @@
           </div>
 
           <div class="col-12 my-2">
-            <a href="404.html" target="_blank">
+            <a href="https://github.com/fanx420/fanx420.github.io/tree/main/Act_04" target="_blank">
               <button class="btn btn-outline-primary d-flex allign-items-center justify-content-center w-100">
                 <img class="mx-2" src="https://cdn-icons-png.flaticon.com/512/718/718110.png" alt="" width="25px">
                 <p class="text-center mb-0">Project 3</p>
@@ -107,7 +109,7 @@
           </div>
 
           <div class="col-12 my-2">
-            <a href="404.html" target="_blank">
+            <a href="https://github.com/fanx420/fanx420.github.io/blob/main/index.html" target="_blank">
               <button class="btn btn-outline-primary d-flex allign-items-center justify-content-center w-100">
                 <img class="mx-2" src="https://cdn-icons-png.flaticon.com/512/718/718110.png" alt="" width="25px">
                 <p class="text-center mb-0">Project 4</p>
@@ -116,13 +118,14 @@
           </div>
 
           <div class="col-12 my-2">
-            <a href="404.html" target="_blank">
+            <a href="https://github.com/fanx420/fanx420.github.io/tree/main/Act_05" target="_blank">
               <button class="btn btn-outline-primary d-flex allign-items-center justify-content-center w-100">
                 <img class="mx-2" src="https://cdn-icons-png.flaticon.com/512/718/718110.png" alt="" width="25px">
                 <p class="text-center mb-0">Project 5</p>
               </button>
             </a>
           </div>
+
         </div>
       </div>
 
@@ -145,10 +148,10 @@
                   Create an HTML website about a place in the world you would like to showcase (City, Country, Park,
                   Mall, Mountain, Volcano, Tourist spot, Museum, etc). This may be one or multi-paged.
                 </p>
-                <a href="Act_02/act_02.html" target="_blank"> <button id="btnWebpage" type="button"
+                <a href="../Act_02/index.html" target="_blank"> <button id="btnWebpage" type="button"
                     class="btn btn-dark my-2">Visit Webpage</button>
                 </a>
-                
+
               </div>
             </div>
           </div>
@@ -165,10 +168,10 @@
                   Create a section of your homepage containing buttons/panels dedicated to your activities in this
                   course. Transfer your activity 2 into a folder within and connect it to one of the buttons/panels.
                 </p>
-                <a href="index.html" target="_blank"> <button id="btnWebpage2" type="button"
+                <a href="../Act_03/index.html" target="_blank"> <button id="btnWebpage2" type="button"
                     class="btn btn-dark my-2">Visit Webpage</button>
                 </a>
-                
+
               </div>
             </div>
           </div>
@@ -185,10 +188,51 @@
                   Create an HTML website that utilizes a free public API with JSON return. It can be about anything. It
                   can have one or more pages
                 </p>
-                <a href="Act_04/index.html" target="_blank"> <button id="btnWebpage3" type="button"
+                <a href="../Act_04/index.html" target="_blank"> <button id="btnWebpage3" type="button"
                     class="btn btn-dark my-2">Visit Webpage</button>
                 </a>
-                
+
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="card my-2">
+              <div class="card-header">
+                Project 4
+              </div>
+              <div class="card-body">
+                <h5 class="card-title " style="color: #FF5722;">
+                  Webpage
+                </h5>
+                <p class="card-text ">
+                  Overhaul your homepage. Replace it with your profile page that showcases things about you. Reserve a
+                  space for your Web Development activities called "projects
+                </p>
+                <a href="../index.html" target="_blank"> <button id="btnWebpage4" type="button"
+                    class="btn btn-dark my-2">Visit Webpage</button>
+                </a>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="card my-2">
+              <div class="card-header">
+                Project 5
+              </div>
+              <div class="card-body">
+                <h5 class="card-title " style="color: #FF5722;">
+                  Webpage
+                </h5>
+                <p class="card-text ">
+                  Create a new page with a video feature by embedding using the YouTube embed API. Populate the page
+                  with relevant information. You can add as many videos as you want. You may apply other media as well.
+
+                </p>
+                <a href="../Act_05/index.html" target="_blank"> <button id="btnWebpage4" type="button"
+                    class="btn btn-dark my-2">Visit Webpage</button>
+                </a>
+
               </div>
             </div>
           </div>
@@ -213,10 +257,9 @@
     const body = document.getElementById("body");
     const btnMode = document.getElementById("btnMode");
     const btnWebpage = document.getElementById("btnWebpage");
-
     const btnWebpage2 = document.getElementById("btnWebpage2")
-
     const btnWebpage3 = document.getElementById("btnWebpage3")
+    const btnWebpage4 = document.getElementById("btnWebpage4")
 
 
     const nav = document.getElementById("navbar");
@@ -228,6 +271,7 @@
       btnWebpage.classList.replace("btn-dark", "btn-light");
       btnWebpage2.classList.replace("btn-dark", "btn-light");
       btnWebpage3.classList.replace("btn-dark", "btn-light");
+      btnWebpage4.classList.replace("btn-dark", "btn-light");
       nav.style.backgroundColor = 'black';
       colorMode = "dark";
     }
@@ -241,6 +285,7 @@
       btnWebpage.classList.replace("btn-light", "btn-dark");
       btnWebpage2.classList.replace("btn-light", "btn-dark");
       btnWebpage3.classList.replace("btn-light", "btn-dark");
+      btnWebpage4.classList.replace("btn-light", "btn-dark");
       nav.style.backgroundColor = 'white';
     }
     function changeTheme() {
