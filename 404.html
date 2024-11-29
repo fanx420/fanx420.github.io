@@ -9,11 +9,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="icon" href="../assets/logo.png">
 
-
   <style>
     body {
       font-family: 'Poppins', sans-serif;
       overflow-x: hidden;
+      padding-top: 100px;
     }
 
     .navbar-nav .nav-link {
@@ -39,7 +39,7 @@
     }
 
     .navbar {
-      background-color: white
+      background-color: white;
     }
 
     .navbar-nav .nav-link:hover::after {
@@ -73,16 +73,16 @@
         <div class="col-12">
           <div class="text-center d-flex flex-column align-items-center justify-content-center">
             <h1 class="display-1 fw-bold">404</h1>
-            <p class="fs-3"> <span class="text-danger">Opps!</span> Page not found.</p>
+            <p class="fs-3"> <span class="text-danger">Oops!</span> Page not found.</p>
             <p class="lead">
               The requested URL was not found on this server.
             </p>
           </div>
         </div>
       </div>
+    </div>
   </section>
 
-  </div>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
     crossorigin="anonymous"></script>
@@ -90,31 +90,30 @@
     integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
     crossorigin="anonymous"></script>
 
-
-
   <script>
-
     let colorMode = "light";
     const body = document.getElementById("body");
     const btnMode = document.getElementById("btnMode");
     const nav = document.getElementById("navbar");
+
     function btnChangeDark() {
       body.setAttribute("data-bs-theme", "dark");
-        btnMode.innerHTML = "Change theme";
-        btnMode.classList.remove("btn-outline-dark");
-        btnMode.classList.add("btn-outline-light");
-        colorMode = "dark";
-        nav.style.backgroundColor = 'black';
+      btnMode.innerHTML = "Change theme";
+      btnMode.classList.remove("btn-outline-dark");
+      btnMode.classList.add("btn-outline-light");
+      colorMode = "dark";
+      nav.style.backgroundColor = 'black';
     }
 
     function btnChangeLight() {
       body.setAttribute("data-bs-theme", "light");
-        btnMode.innerHTML = "Change theme";
-        btnMode.classList.remove("btn-outline-light");
-        btnMode.classList.add("btn-outline-dark");
-        colorMode = "light";
-        nav.style.backgroundColor = 'white';
+      btnMode.innerHTML = "Change theme";
+      btnMode.classList.remove("btn-outline-light");
+      btnMode.classList.add("btn-outline-dark");
+      colorMode = "light";
+      nav.style.backgroundColor = 'white';
     }
+
     function changeTheme() {
       if (colorMode === "light") {
         btnChangeDark();
@@ -122,7 +121,6 @@
         btnChangeLight();
       }
     }
-
   </script>
 </body>
 
